@@ -11,8 +11,6 @@ playerStatus.innerText = "It's " + currentPlayer + "'s turn";
     currentPlayer = currentPlayer === "X" ? "O" : "X";
     playerStatus.innerText = "It's "+currentPlayer+"'s turn";
   }
-  
-
   cells.forEach((cell, index) => {
     cell.addEventListener("click", () => {
       if (board[index] === "" && isGameActive) {
@@ -22,5 +20,11 @@ playerStatus.innerText = "It's " + currentPlayer + "'s turn";
       }
     });
   });
+  restart.addEventListener("click", ()=>{
+    board = ["", "", "", "", "", "", "", "", ""];
+    isGameActive = true;
+    currentPlayer = "X";
+    playerStatus.innerText = "It's "+currentPlayer+"'s turn";
+  })
   
  
