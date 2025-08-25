@@ -25,6 +25,9 @@ playerStatus.innerText = "It's " + currentPlayer + "'s turn";
     isGameActive = true;
     currentPlayer = "X";
     playerStatus.innerText = "It's "+currentPlayer+"'s turn";
+    cells.forEach(cell => {
+      cell.innerText="";
+    });  
   })
   
  
